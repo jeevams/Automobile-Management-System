@@ -1,0 +1,285 @@
+<html lang="en" class=""><head><script src="https://static.codepen.io/assets/editor/live/console_runner-1df7d3399bdc1f40995a35209755dcfd8c7547da127f6469fd81e5fba982f6af.js"></script><script src="https://static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js"></script><meta charset="UTF-8"><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico"><link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111"><link rel="canonical" href="https://codepen.io/peiris/pen/YBGeBR?page=4">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+<style class="cp-pen-styles">body {
+  background-color: #000000;
+}
+
+.loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.loader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  box-shadow: none;
+  border: 10px solid rgba(100, 255, 254, 0.8);
+  border-radius: 100%;
+  animation: shadow 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+.loader #particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0px 0px 2px #0300cc);
+}
+.loader:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  box-shadow: inset 0px 0px 40px 5px #0300cc;
+  border-radius: 100%;
+}
+.loader:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  box-shadow: inset 0px 0px 0px 8px rgba(18, 17, 142, 0.38);
+  border-radius: 100%;
+}
+.loader canvas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 100%;
+}
+.loader--face {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+}
+.loader--face--eyes {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  display: flex;
+  margin: auto;
+  transform: translateX(-50%);
+}
+.loader--face--eyes span {
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 12px;
+  height: 12px;
+  background-color: #64fffe;
+  box-shadow: 0px 0px 40px 5px #0300cc;
+  border-radius: 100%;
+}
+.loader--face--smile {
+  transform-origin: center center;
+  animation: rotate 2s linear infinite;
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
+}
+.loader--face--smile circle {
+  animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  stroke-dasharray: 150, 200;
+  stroke-dashoffset: -10;
+  stroke-linecap: round;
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: 0px 0px 40px 2px #0300cc;
+  }
+  50% {
+    box-shadow: 0px 0px 40px 0 #0300cc;
+  }
+  100% {
+    box-shadow: 0px 0px 40px 2px #0300cc;
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124;
+  }
+}
+</style></head><body>
+<!-- Loader Wrapper -->
+<div class="load">
+<div class="loader-wrapper">
+  <!-- Loader -->
+  <div class="loader">
+
+    <!-- Particles -->
+    <div id="particles-js"><canvas class="particles-js-canvas-el" width="300" height="300" style="width: 100%; height: 100%;"></canvas></div>
+
+    <!-- Loader face -->
+    <div class="loader--face">
+
+      <!-- Loader face smile -->
+      <svg class="loader--face--smile" viewBox="25 25 50 50">
+        <circle cx="50" cy="50" r="20" fill="none" stroke="#64FFFE" stroke-width="2"></circle>
+      </svg><!-- ./Loader face smile -->
+
+      <!-- Loader face eyes -->
+      <div class="loader--face--eyes">
+        <span></span>
+        <span></span>
+      </div><!-- ./Loader face eyes -->
+    </div><!-- ./Loader face -->
+  </div><!-- ./Loader -->
+</div><!-- ./Loader Wrapper -->
+</div>
+<!--
+- Design is inspired by work of @glebich
+- https://dribbble.com/shots/5276094-Smile-loader-for-AI-product-design
+-->
+<script>
+(function(){
+  var preload=document.getElementById("load");
+  var loading=0;
+  var id=setInterval(frame,24);
+  function frame(){
+      if(loading==100){
+        clearInterval(id);
+        location.href="home.html"
+      }
+      else{
+        loading=loading+1;
+      
+      }
+  }
+})();
+</script>
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script><script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script id="rendered-js">
+          particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 1200,
+      "density": {
+        "enable": true,
+        "value_area": 300 } },
+
+
+    "color": {
+      "value": "#64fffe" },
+
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#0300cc" },
+
+      "polygon": {
+        "nb_sides": 5 },
+
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100 } },
+
+
+    "opacity": {
+      "value": 1,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 6,
+        "opacity_min": 0.5914085914085914,
+        "sync": false } },
+
+
+    "size": {
+      "value": 1.5,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 4,
+        "size_min": 0.1,
+        "sync": true } },
+
+
+    "line_linked": {
+      "enable": false,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1 },
+
+    "move": {
+      "enable": true,
+      "speed": 0.1,
+      "direction": "top",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": true,
+      "attract": {
+        "enable": true,
+        "rotateX": -200,
+        "rotateY": -200 } } },
+
+
+
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "bubble" },
+
+      "onclick": {
+        "enable": true,
+        "mode": "repulse" },
+
+      "resize": true },
+
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1 } },
+
+
+      "bubble": {
+        "distance": 250,
+        "size": 0,
+        "duration": 2,
+        "opacity": 0,
+        "speed": 1 },
+
+      "repulse": {
+        "distance": 400,
+        "duration": 0.4 },
+
+      "push": {
+        "particles_nb": 4 },
+
+      "remove": {
+        "particles_nb": 2 } } },
+
+
+
+  "retina_detect": true });
+          //# sourceURL=pen.js
+        </script>
+</body></html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>BAJAJ</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style type="text/css">
+  body{
+  	background-color: black;
+
+  background: url("b.jpg") no-repeat  center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size:cover; }
+  .button {
+   /* Green */
+   background-color: white;
+  border: 5px solid black;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.button:hover{
+	color: white;
+	background-color: black;
+}
+ .but{
+   /* Green */
+   background-color: black;
+  border: 5px solid white;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.but:hover{
+	color: black;
+	background-color: white;
+	 border: 5px solid black;
+}
+  	.container{
+  		margin-top: 100px;
+  		margin-bottom: 100px;
+  		box-sizing  : border-box;
+        border-radius: 8px;
+        width: 80%;
+        background-color: 0000ff;
+        box-shadow: 0 0 16px rgb(255, 255, 255);
+        font-family: 'Teko', sans-serif;
+        font-size:30px;
+        word-spacing: 20px;
+        padding: 10px;
+  	}
+
+  	form{
+  		margin-left: 100px;
+  		margin-right: 100px;
+  		color: lightblue;
+  	}
+  	label{
+  		color: black;
+    
+    text-align: left;
+
+  	}
+  	input[type="password"],input[type="text"],input[type="email"],textarea{
+  		color: black;
+  		background-color: orange;
+      margin-right: 100px;
+  		border-radius: 8px;
+  		width:300px;
+  	}
+
+  	input[type="password"]:hover,input[type="text"]:hover,input[type="email"]:hover,textarea:hover{
+  		color: black;
+  		background-color: #ff9933;
+  	}
+  	.panel{
+			background-color: rgba(255,255,255,0.6);
+			width: 80%;
+			margin-top:50px;
+			border:6px solid white;
+			border-radius: 8px;
+		}
+		.panel:hover{
+  			box-shadow: 0 14px 28px rgba(2,255,255,0.25), 0 10px 10px rgba(255,255,0,0.22);
+  			transition: all 0.3s;
+  			transform: translateZ(50px);
+}
+details {
+  border-radius: 8px;
+  background: #EEE;
+  margin: 1em 0;
+
+}
+
+summary {
+  background: #333;
+  color: #FFF;
+  border-radius: 3px;
+  padding: 5px 10px;
+  outline: none;
+}
+
+/* Style the summary when details box is open */
+details[open] summary {
+  background: orange;
+  color: #333;
+}
+
+/* Custom Markers */
+#custom-marker summary {
+  font-size: 17px;
+  vertical-align: top;
+}
+
+#custom-marker summary::-webkit-details-marker {
+  display: none;
+}
+
+#custom-marker summary:before {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  content: "";
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4621/treehouse-icon-sprite.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+#custom-marker[open] summary:before {
+  background-position: -18px 0;
+}
+
+
+table {
+  border: 0;
+  width: 100%;
+}
+
+th, td {
+  vertical-align: top;
+  text-align: left;
+  padding: 0.5em;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+th {
+  width: 200px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+
+li {
+  display: inline;
+  padding-right: 10px;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+	
+
+  .slidecontainer {
+  width: 50%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 50%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+mark { 
+  background-color: orange;
+  border-radius: 8px;
+  color: black;
+}
+  </style>
+  
+  <script type="text/javascript">
+  	$('document').ready(function(){
+  		$('.container').hide();
+  		$('#other').hide();
+  	});
+  </script>
+</head>
+<body>
+	<center><div class="panel panel-default">
+		<h1><font color="green"><b><h1>PULSAR150</h1></b></font></h1>
+		<button class="button" id="bt">Visit</button>
+	</div></center>
+	<div class="container" id="c1">
+    <div align="left"> <br><img src="150.JPG" width="460" height="345"></div>
+    <label> PRICE:74,313</label><br>
+     <label>CC: 149</label><br>
+     <label>Fuel tank capacity:15</label> <br>
+     <label>Average (kmpl): 65</label><br>
+     <label>No of avaliable bike: 10</label>
+     <button type="submit" class="butto but">BUY</button>
+
+    
+
+
+
+
+
+		<script type="text/javascript">
+			$('#bt').click(function(){
+        $('#c2').hide();
+				$('#c1').slideToggle("slow");
+				$('#p').remove();
+			});
+			$('#o').click(function(){
+				$('#other').show("slow");
+			});
+
+			$('.ot').click(function(){
+				$('#other').hide();
+			});
+
+			$('.butto').click(function(){
+				$('.container').replaceWith("<center><h1><font color='white'>Your response has been submitted</font></h1></center>");
+			});
+		</script>
+
+	</div>
+</div>
+</center> <center><div class="panel panel-default">
+    <h1><font color="green"><b><h1>PULSAR180</h1></b></font></h1>
+    <button class="button" id="bt2">Visit</button>
+  </div></center>
+  <div class="container" id="c2">
+    <div class="row">
+      <div class="col-md-12">
+   <div align="left"> <br><img src="1802.jpg" width="460" height="345"></div>
+    <label> PRICE:95,198</label><br>
+     <label>CC: 179</label><br>
+     <label>Fuel tank capacity:17</label> <br>
+     <label>Average (kmpl): 55</label><br>
+     <label>No of avaliable bike: 10</label>
+     <button type="submit" class="butto but">BUY</button>
+
+
+    <script type="text/javascript">
+      $('#bt2').click(function(){
+        $('#c1').hide();
+        $('#c3').hide();
+        $('#c2').slideToggle("slow");
+        $('#p').remove();
+      });
+      $('#o').click(function(){
+        $('#other').show("slow");
+      });
+
+      $('.ot').click(function(){
+        $('#other').hide();
+      });
+
+      $('.butto').click(function(){
+        $('.container').replaceWith("<center><h1><font color='white'>Your response has been submitted</font></h1></center>");
+      });
+    </script>
+
+  </div>
+  </div>
+  </div><center><div class="panel panel-default">
+     <h1><font color="green"><b><h1>PULSAR220</h1></b></font></h1>
+    <button class="button" id="bt3">Visit</button>
+  </div></center>
+  <div class="container" id="c3">
+    <div class="row">
+      <div class="col-md-12">
+   <div align="left"> <br><img src="200.JPG" width="460" height="345"></div>
+    <label> PRICE:102,313</label><br>
+     <label>CC: 199</label><br>
+     <label>Fuel tank capacity:25</label> <br>
+     <label>Average (kmpl): 45</label><br>
+     <label>No of avaliable bike: 10</label>
+     <button type="submit" class="butto but">BUY</button>
+
+
+    <script type="text/javascript">
+      $('#bt3').click(function(){
+        $('#c1').hide();
+         $('#c2').hide();
+        $('#c3').slideToggle("slow");
+        $('#p').remove();
+      });
+      $('#o').click(function(){
+        $('#other').show("slow");
+      });
+
+      $('.ot').click(function(){
+        $('#other').hide();
+      });
+
+      $('.butto').click(function(){
+        $('.container').replaceWith("<center><h1><font color='white'>Your response has been submitted</font></h1></center>");
+      });
+    </script>
+
+  </div>
+  </div>
+  </div>
+</body>
+</html>
